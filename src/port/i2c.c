@@ -26,9 +26,9 @@
 int openI2CDevice(const char* device)
 {
     int i2c_fd;
-    char filename[40];
-    sprintf(filename, device);
-    if ((i2c_fd = open(filename,O_RDWR)) < 0) 
+//    char filename[40];
+//    sprintf(filename, device);
+    if ((i2c_fd = open(device,O_RDWR)) < 0) 
 	{
         printf("Failed to open the bus.");
         /* ERROR HANDLING; you can check errno to see what went wrong */
